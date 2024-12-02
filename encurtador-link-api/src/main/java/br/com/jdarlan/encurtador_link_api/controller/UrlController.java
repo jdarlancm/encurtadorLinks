@@ -28,6 +28,8 @@ public class UrlController {
     @PostMapping
     public ResponseEntity<String> createShorUrl(@RequestBody Map<String, String> request) {
         String originalUrl = request.get("originalUrl");
+        System.out.println("====>"  + originalUrl);
+        
         Url url = service.createShortUrl(originalUrl);
         return ResponseEntity.ok(url.getShortUrl());
     }

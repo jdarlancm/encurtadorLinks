@@ -1,0 +1,12 @@
+<main class="main">
+  <div class="container">
+    <h1>Encurtador de Links</h1>
+    <input [(ngModel)]="originalUrl" placeholder="Insira a URL" />
+    <button (click)="shortenUrl()">Encurtar</button>
+    <div *ngIf="shortUrl">
+      Link Encurtado: <a [href]="shortUrl" target="_blank">{{ shortUrl }}</a>
+    </div>
+  </div>
+</main>
+
+<router-outlet />
